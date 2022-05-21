@@ -1,0 +1,15 @@
+<h1>******* welcome to the longest word game</h1>
+<h2>Here is your grid:</h2>
+<ul>
+<h2><% @letters.each do |letter|  %>
+<li><%= letter %></li>
+</ul>
+<% end %></h2>
+<h2>Whats the longest word you can find</h2>
+<form action="/socre">
+<input type="text" name="word">
+<input type="submit" value="Play!">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<%= hidden_field_tag :letters %>
+</form>
+<h1>******</h1>
